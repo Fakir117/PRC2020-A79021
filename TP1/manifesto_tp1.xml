@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifesto SYSTEM "file:/Users/diogosilva117/Documents/4_Ano/PLC/PRI/aulas/aula02/manifesto.dtd">
+<manifesto>
+    <meta>
+        <id>PRC::TP1_2020</id>
+        <título>Povoação de um ficheiro TTL</título>
+        <subtítulo></subtítulo>
+        <dinício>03/02/2020</dinício>
+        <dfim>10/02/2020</dfim>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website>http://www.di.uminho.pt/~jcr/</website>
+        </supervisor>
+    </meta>
+    <equipe>
+        <elemento>
+            <id>A79021</id>
+            <nome>Diogo Manuel Macedo Silva</nome>
+            <email>a79021@alunos.uminho.pt</email>
+            <website></website>
+            <foto path=""/>
+        </elemento>
+    </equipe>
+    <resumo>
+        <para>Através do ficheiro <b>CSV</b> retirado da UC <b>PRI</b> do ano 2019, foi criado um ficheiro no formato <b>TTL</b> com os id's e nomes dos alunos. 
+            Para este ficheiro ter o formato necessário, foi utilizado um script em <b>Python</b> que transformou o dataset CSV no formato <b>ttl</b>.</para>
+    </resumo>
+    <resultados>
+        <resultado path="salaAula.ttl">Ficheiro TTL</resultado>
+        <resultado path="csvtottl.py">Ficheiro Python</resultado>
+    </resultados>
+</manifesto>

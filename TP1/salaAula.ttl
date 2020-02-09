@@ -1,0 +1,521 @@
+@prefix : <http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula> .
+
+<http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#frequenta
+:frequenta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :éFrequentadaPor ;
+           rdfs:domain :Aluno ;
+           rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#leciona
+:leciona rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éLecionadaPor ;
+         rdfs:domain :Professor ;
+         rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#éFrequentadaPor
+:éFrequentadaPor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#éLecionadaPor
+:éLecionadaPor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#ident
+:ident rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#Aluno
+:Aluno rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#Professor
+:Professor rdf:type owl:Class ;
+           rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#UC
+:UC rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A64303
+:A64303 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A64303"^^xsd:string ;
+        :nome "Flávia Silva"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A66822
+:A66822 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A66822"^^xsd:string ;
+        :nome "Miguel Guimarães"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A68690
+:A68690 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A68690"^^xsd:string ;
+        :nome "António Oliveira"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A71835
+:A71835 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A71835"^^xsd:string ;
+        :nome "Tiago Sá"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A71940
+:A71940 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A71940"^^xsd:string ;
+        :nome "Eduardo Cunha"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A72187
+:A72187 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A72187"^^xsd:string ;
+        :nome "José Carlos Lima"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A73547
+:A73547 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A73547"^^xsd:string ;
+        :nome "Alexandre Teixeira"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A73639
+:A73639 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A73639"^^xsd:string ;
+        :nome "Frederico Pinto"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A73883
+:A73883 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A73883"^^xsd:string ;
+        :nome "Cesário Perneta"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A74033
+:A74033 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A74033"^^xsd:string ;
+        :nome "João Pedro Gomes"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A74092
+:A74092 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A74092"^^xsd:string ;
+        :nome "Tiago Santos"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A74550
+:A74550 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A74550"^^xsd:string ;
+        :nome "Pedro Silva"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A74658
+:A74658 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A74658"^^xsd:string ;
+        :nome "Rui Vieira"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A75870
+:A75870 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A75870"^^xsd:string ;
+        :nome "António Chaves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A76987
+:A76987 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A76987"^^xsd:string ;
+        :nome "Bruno Carvalho"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A77048
+:A77048 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A77048"^^xsd:string ;
+        :nome "Eduardo Rocha"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A77284
+:A77284 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A77284"^^xsd:string ;
+        :nome "Filipe Silva"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A77617
+:A77617 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A77617"^^xsd:string ;
+        :nome "André Salgueiro"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78085
+:A78085 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78085"^^xsd:string ;
+        :nome "Rui Calheno"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78275
+:A78275 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78275"^^xsd:string ;
+        :nome "Joana Pereira"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78416
+:A78416 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78416"^^xsd:string ;
+        :nome "Francisco Oliveira"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78425
+:A78425 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78425"^^xsd:string ;
+        :nome "Alexandre Dias"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78508
+:A78508 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78508"^^xsd:string ;
+        :nome "Fábio Araújo"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78679
+:A78679 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78679"^^xsd:string ;
+        :nome "Diana Barbosa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78821
+:A78821 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78821"^^xsd:string ;
+        :nome "José Carlos Martins"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A78869
+:A78869 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A78869"^^xsd:string ;
+        :nome "Manuel Sousa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A79021
+:A79021 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A79021"^^xsd:string ;
+        :nome "Diogo Silva"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#A79617
+:A79617 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "A79617"^^xsd:string ;
+        :nome "Raul Vilas Boas"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#ID8120
+:ID8120 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :gcs ,
+                   :pri ;
+        :ident "ID8120"^^xsd:string ;
+        :nome "Lázaro Lima"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#ID8125
+:ID8125 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :pri ;
+        :ident "ID8125"^^xsd:string ;
+        :nome "Tânia Esteves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#PG33874
+:PG33874 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :pri ;
+         :ident "PG33874"^^xsd:string ;
+         :nome "João Grenhas"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#PG38406
+:PG38406 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :pri ;
+         :ident "PG38406"^^xsd:string ;
+         :nome "Adriano Campinho"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#PG38413
+:PG38413 rdf:type owl:NamedIndividual ,
+                  :Aluno ,
+                  :Pessoa ;
+         :frequenta :gcs ,
+                    :pri ;
+         :ident "PG38413"^^xsd:string ;
+         :nome "Ezequiel Moreira"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#a82324
+:a82324 rdf:type owl:NamedIndividual ,
+                 :Aluno ,
+                 :Pessoa ;
+        :frequenta :prc ,
+                   :pri ;
+        :ident "A82324"^^xsd:string ;
+        :nome "Carlos Barbosa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#gcs
+:gcs rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor :A64303 ,
+                      :A66822 ,
+                      :A68690 ,
+                      :A71835 ,
+                      :A71940 ,
+                      :A72187 ,
+                      :A73547 ,
+                      :A73639 ,
+                      :A73883 ,
+                      :A74033 ,
+                      :A74092 ,
+                      :A74550 ,
+                      :A74658 ,
+                      :A75870 ,
+                      :A76987 ,
+                      :A77048 ,
+                      :A77284 ,
+                      :A77617 ,
+                      :A78085 ,
+                      :A78275 ,
+                      :A78416 ,
+                      :A78425 ,
+                      :A78508 ,
+                      :A78679 ,
+                      :A78821 ,
+                      :A78869 ,
+                      :A79021 ,
+                      :A79617 ,
+                      :ID8120 ,
+                      :PG33874 ,
+                      :PG38406 ,
+                      :PG38413 ;
+     :éLecionadaPor :prh ;
+     :nome "Gramáticas na Compreensão de Software"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#jcr
+:jcr rdf:type owl:NamedIndividual ,
+              :Pessoa ,
+              :Professor ;
+     :leciona :prc ,
+              :pri ;
+     :ident "p1313"^^xsd:string ;
+     :nome "José Carlos Ramalho"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#prc
+:prc rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor :a82324 ;
+     :éLecionadaPor :jcr ;
+     :nome "Processamento e Representação de Conhecimento"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#prh
+:prh rdf:type owl:NamedIndividual ,
+              :Pessoa ,
+              :Professor ;
+     :leciona :gcs ;
+     :nome "Pedro Rangel Henriques"^^xsd:string .
+
+
+###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#pri
+:pri rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor :A64303 ,
+                      :A66822 ,
+                      :A68690 ,
+                      :A71835 ,
+                      :A71940 ,
+                      :A72187 ,
+                      :A73547 ,
+                      :A73639 ,
+                      :A73883 ,
+                      :A74033 ,
+                      :A74092 ,
+                      :A74550 ,
+                      :A74658 ,
+                      :A75870 ,
+                      :A76987 ,
+                      :A77048 ,
+                      :A77284 ,
+                      :A77617 ,
+                      :A78085 ,
+                      :A78275 ,
+                      :A78416 ,
+                      :A78425 ,
+                      :A78508 ,
+                      :A78679 ,
+                      :A78821 ,
+                      :A78869 ,
+                      :A79021 ,
+                      :A79617 ,
+                      :ID8120 ,
+                      :ID8125 ,
+                      :PG33874 ,
+                      :PG38406 ,
+                      :PG38413 ,
+                      :a82324 ;
+     :éLecionadaPor :jcr ;
+     :nome "Processamento e Representação de Informação"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
