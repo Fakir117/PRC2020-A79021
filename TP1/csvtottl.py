@@ -20,7 +20,8 @@ for row in reader:
 		c = row
 		entry = ""
 
-		entry = ":" + c[0] + " rdf:type owl:NamedIndividual ,\n\t\t\t\t\t\t\t\t\t"
+		entry = "###  http://www.semanticweb.org/diogosilva117/ontologies/2020/salaAula#" + c[0] + "\n"
+		entry += ":" + c[0] + " rdf:type owl:NamedIndividual ,\n\t\t\t\t\t\t\t\t\t"
 		entry += ":Aluno ,\n\t\t\t\t\t\t\t\t\t"
 		entry += ":Pessoa ;\n\t\t\t\t"
 		entry += ":frequenta :pri ,\n\t\t\t\t\t\t\t\t\t"

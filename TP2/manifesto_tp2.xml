@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifesto SYSTEM "file:/Users/diogosilva117/Documents/4_Ano/PLC/PRI/aulas/aula02/manifesto.dtd">
+<manifesto>
+    <meta>
+        <id>PRC::TP2-2020</id>
+        <título>Realização de uma ontologia e Queries</título>
+        <subtítulo>Realização da ontologia do Arquivo de Música Digital e queries com esta ontologia</subtítulo>
+        <dinício>10/02/2020</dinício>
+        <dfim>17/02/2020</dfim>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website>http://www.di.uminho.pt/~jcr/</website>
+        </supervisor>
+    </meta>
+    <equipe>
+        <elemento>
+            <id>A79021</id>
+            <nome>Diogo Manuel Macedo Silva</nome>
+            <email>a79021@alunos.uminho.pt</email>
+            <website></website>
+            <foto path=""/>
+        </elemento>
+    </equipe>
+    <resumo>
+        <para>Foi realizada uma ontologia acerca do Arquivo de Música Digital através de um ficheiro em XML. Para criar a ontologia foi usado o <b>Protégé</b> 
+            para criar as suas classes e as suas propriedades. Para popular a ontologia, foi utilizado <b>XSLT</b> que transformou o conteúdo do ficheiro XML
+            em formato <b>TTL</b>. Para realizar as queries pretendidas, primeiro foi criado um repositório no <b>GraphDB</b> para posteriormente ser realizado
+            as queries em <b>SPARQL</b>.</para> 
+    </resumo>
+    <resultados>
+        <resultado path="arquivo-musica-digital.xml">Ficheiro XML</resultado>
+        <resultado path="xml2ttl.xsl">Ficheiro XSLT</resultado>
+        <resultado path="amd.ttl">Ontologia em TTL</resultado>
+        <resultado path="queries">Queries realizadas</resultado>
+    </resultados>
+</manifesto>
