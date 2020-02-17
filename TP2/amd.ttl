@@ -12,17 +12,6 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#escreveuObra
-:escreveuObra rdf:type owl:ObjectProperty ;
-              owl:inverseOf :temCompositor ;
-              rdfs:domain :Compositor ;
-              rdfs:range :Obra .
-
-
-###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#temCompositor
-:temCompositor rdf:type owl:ObjectProperty .
-
-
 ###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#temPartitura
 :temPartitura rdf:type owl:ObjectProperty ;
               owl:inverseOf :éPartituraDe ;
@@ -58,11 +47,6 @@
              rdfs:domain :Partitura .
 
 
-###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#nome
-:nome rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Compositor .
-
-
 ###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#tipo
 :tipo rdf:type owl:DatatypeProperty ;
       rdfs:domain :Obra .
@@ -81,10 +65,6 @@
 #################################################################
 #    Classes
 #################################################################
-
-###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#Compositor
-:Compositor rdf:type owl:Class .
-
 
 ###  http://www.semanticweb.org/diogosilva117/ontologies/2020/1/amd#Obra
 :Obra rdf:type owl:Class .

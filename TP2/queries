@@ -6,15 +6,15 @@ select ?compositor where {
 }
 order by ?compositor
 
-
 --------------------------------------------------------
 2) Títulos das obras do tipo "Marcha de Desfile"
 
 select ?titulo where { 
-	?id a :Obra .
+    ?id a :Obra .
     ?id :tipo "Marcha de Desfile".
     ?id :título ?titulo.
-} 
+}
+order by ?titulo 
 
 --------------------------------------------------------
 3) Quantas partituras estão catalogadas para cada obra
@@ -30,8 +30,9 @@ group by ?id
 4) Quais os títulos das obras com partitura para Bombo
 
 select ?titulo where { 
-	?id a :Obra .
+    ?id a :Obra .
     ?id :temPartitura ?p.
     ?p :instrumento "Bombo".
     ?id :título ?titulo.
 }
+order by ?titulo
