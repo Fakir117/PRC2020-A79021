@@ -4,7 +4,7 @@
     <meta>
         <id>PRC::TP2-2020</id>
         <título>Realização de uma ontologia e Queries</título>
-        <subtítulo>Realização da ontologia do Arquivo de Música Digital e queries com esta ontologia</subtítulo>
+        <subtítulo>Realização da ontologia do Arquivo de Música Digital e queries utilizando esta ontologia</subtítulo>
         <dinício>10/02/2020</dinício>
         <dfim>17/02/2020</dfim>
         <supervisor>
@@ -24,9 +24,11 @@
     </equipe>
     <resumo>
         <para>Foi realizada uma ontologia acerca do Arquivo de Música Digital através de um ficheiro em XML. Para criar a ontologia foi usado o <b>Protégé</b> 
-            para criar as suas classes e as suas propriedades. Para popular a ontologia, foi utilizado <b>XSLT</b> que transformou o conteúdo do ficheiro XML
-            em formato <b>TTL</b>. Para realizar as queries pretendidas, primeiro foi criado um repositório no <b>GraphDB</b> para posteriormente ser realizado
-            as queries em <b>SPARQL</b>.</para> 
+            para criar as suas classes e as suas propriedades. Foi então criadas classes para as Obras e para as partituras. As obras têm como atributo o seu 
+            título, o tipo em que estão classificadas, o seu compositor e o seu arranjo. As partituras têm como atributos a voz, o documento relacionado com a 
+            partitura e o instrumento que é utilizado. Para popular a ontologia, foi utilizado <b>XSLT</b> que transformou o conteúdo do ficheiro XML em formato <b>TTL</b>.
+            Para realizar as queries pretendidas, primeiro foi criado um repositório no <b>GraphDB</b> para posteriormente estas queries serem realizadas em <b>SPARQL</b>.
+        </para>
     </resumo>
     <resultados>
         <resultado path="arquivo-musica-digital.xml">Ficheiro XML</resultado>
