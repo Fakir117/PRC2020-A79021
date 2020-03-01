@@ -1,0 +1,86 @@
+extends layout
+
+block corpo
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-grey 
+                h1= amd.id
+                h1= amd.tit
+            .w3-container
+                table.w3-table.w3-all
+                    hr
+                    if amd.subtitulo
+                        tr
+                            th Subtítulo
+                            td= amd.subtitulo
+                                hr
+                    tr
+                        th Tipo
+                        td= amd.tipo
+                            hr
+                    tr
+                        th Compositor
+                        td
+                            if amd.comp
+                                p= amd.comp
+                            else
+                                p N/A
+                            hr
+                    tr
+                        th Arranjo
+                        td
+                            if amd.arranjo
+                                p=amd.arranjo
+                            else 
+                                p N/A
+                            hr
+                    if amd.editado
+                        tr
+                            th Editado
+                            td= amd.editado
+                                hr
+                    if amd.instrumentos
+                        tr
+                            th Instrumentos:
+                            tr.w3-container.w3-border-top
+                                th Instrumento
+                                th Voz
+                                th Clave
+                                th Afinação
+                                th Path
+                        each c in amd.instrumentos
+                            tr.w3-container
+                                td 
+                                    if c.nome
+                                        u=c.nome
+                                    else
+                                        p N/A
+                                td
+                                    if c.partitura.voz
+                                        p=c.partitura.voz
+                                    else 
+                                        p N/A
+                                td
+                                    if c.partitura.clave
+                                        p=c.partitura.clave
+                                    else 
+                                        p N/A
+                                td
+                                    if c.partitura.afinacao
+                                        p=c.partitura.afinacao
+                                    else 
+                                        p N/A
+                                td
+                                    if c.partitura.path
+                                        p=c.partitura.path
+                                    else 
+                                        p N/A
+                    else
+                        tr
+                            th Instrumentos
+                            td
+                                p N/A
+            footer.w3-container.w3-grey
+                p
+                    a(href='http://localhost:7024')
+                        | Voltar à página principal
