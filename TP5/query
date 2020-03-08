@@ -1,0 +1,16 @@
+select distinct ?nome ?gender ?dataNasc ?obito ?paisOrigem ?abstract where {
+?person a dbo:Swimmer.
+?person foaf:name ?nome.
+?person foaf:gender ?gender.
+?person dbo:birthDate ?dataNasc.
+optional{
+?person dbo:birthPlace ?pais.
+?pais foaf:name ?paisOrigem.
+}
+optional{?person dbo:deathDate ?obito}.
+optional{
+    ?person dbo:abstract ?abstract.
+    filter langMatches(lang(?abstract),'en')
+    //filter(lang(?abstract)='en')
+}
+}
