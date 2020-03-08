@@ -11,6 +11,5 @@ optional{?person dbo:deathDate ?obito}.
 optional{
     ?person dbo:abstract ?abstract.
     filter langMatches(lang(?abstract),'en')
-    //filter(lang(?abstract)='en')
 }
 }
