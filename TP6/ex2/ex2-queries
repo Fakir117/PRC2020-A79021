@@ -1,0 +1,29 @@
+------------------------------------------------------------
+1) Que lojas vendem o produto Água?
+
+select ?loja where { 
+	?loja a :Loja.
+    ?loja :vende ?produto.
+    ?produto :nome "Água".
+}
+order by ?loja
+------------------------------------------------------------
+2) Que produtos são comprados pelo "Manuel Sousa"?
+
+select ?produto where { 
+	?cliente a :Cliente.
+    ?cliente :compra ?produto.
+    ?cliente :nome "Manuel Sousa".
+}
+order by ?produto
+------------------------------------------------------------
+3) Quem são os potenciais clientes da loja "Continente"?
+
+select distinct ?cliente where { 
+	?loja a :Loja.
+    ?loja :vende ?produto.
+    ?loja :nome "Continente".
+    ?cliente a :Cliente.
+    ?cliente :compra ?produto.
+}
+order by ?cliente
