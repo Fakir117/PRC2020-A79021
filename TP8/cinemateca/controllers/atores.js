@@ -51,32 +51,3 @@ Atores.info = async (id) =>{
 }
 
 
-/*
-    select distinct ?f ?filme where{
-        ?a a c:Ator.
-        ?a c:nome "${id}".
-        ?a c:sexo ?sexo.
-        ?a c:atuou ?f.
-        ?f c:título ?filme.
-    }
-    select distinct ?a ?f ?filme ?p where{
-    ?a a c:Ator.
-    ?a c:nome "Jason Statham".
-    ?a c:sexo ?sexo.
-    ?a c:atuou ?f.
-    ?f c:título ?filme.
-    optional{
-    	?p a c:Personagem.
-    	?p c:éRepresentadoPor ?a.
-    }
-    }
-    select ?a ?sexo (group_concat(?f;separator=" ; ") as ?fid) (group_concat(?filme;separator=" | ") as ?filmes) where{
-    ?a a c:Ator.
-    ?a c:nome "Jason Statham".
-    ?a c:sexo ?sexo.
-    ?a c:atuou ?f.
-    ?f c:título ?filme.
-    }
-
-    group by ?a ?anome ?sexo
-    */

@@ -38,7 +38,7 @@ select ?pokemon where {
 	?p a :Pokemon.
     ?p :Name "Eevee"@en.
     ?p :EvolvesFrom ?evo.
-    ?evo :EvolvesTo ?poke.
+    ?evo :EvolvesTo+ ?poke.
     ?poke :Name ?pokemon.
     filter(lang(?pokemon)='en').
 }

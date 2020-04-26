@@ -38,7 +38,6 @@ Filmes.getLista = async function(req){
     } 
 }
 
-// NÃO ESTÁ CORRETO
 Filmes.filmeInfo = async function(id) {
     var query = `select ?titulo ?duracao ?data ?lingua ?pais ?realizador ?rnome 
     (group_concat(distinct ?a;separator=" ; ") as ?aid)
@@ -75,24 +74,3 @@ Filmes.filmeInfo = async function(id) {
         throw(e)
     } 
 }
-
-/*
-select distinct ?f ?titulo ?duracao ?data ?lingua ?pais ?realizador ?rnome ?a ?ator ?genero where {
-        c:War a c:Filme ;
-                c:título ?titulo ;
-                c:duração ?duracao ;
-                c:dataLançamento ?data ;
-                c:temLíngua ?l ;
-                c:temPaísOrigem ?p ;
-                c:temRealizador ?realizador .
-        ?realizador c:nome ?rnome .
-        bind(strafter(str(?l),"cinema#") as ?lingua) .
-        filter(?lingua = 'English') .  
-        bind(replace(strafter(str(?p),"cinema#"),"_"," ") as ?pais) .
-    	?a a c:Ator.
-    	?a c:nome ?ator.
-    	?a c:atuou c:War.
-    	c:War c:temGénero ?g.
-    	?g c:nome ?genero.
-} 
-*/
