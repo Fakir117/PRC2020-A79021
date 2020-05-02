@@ -1,0 +1,102 @@
+---------------------------------------
+1) Irmãos
+
+select ?a ?anome ?b ?bnome where{
+	?a :name ?anome.
+    ?b :name ?bnome.  
+	?a :hasSibling ?b.
+    filter(?a != ?b).
+}
+
+---------------------------------------
+2) Tios
+
+select ?a ?anome ?t ?tio where{
+	?a :name ?anome.
+    ?a :hasParent ?p.
+    ?p :hasSibling ?t.
+    ?t :name ?tio.
+    filter(?p != ?t).
+}
+
+---------------------------------------
+3.Primos
+
+select ?a ?anome ?primo ?pnome where{
+	?a :name ?anome.
+    ?a :hasParent ?p.
+    ?p :hasSibling ?t.
+    ?t :hasChild ?primo.
+    ?primo :name ?pnome.
+    filter(?p != ?t).
+}
+---------------------------------------
+4.Ancestrais
+
+select ?p ?pnome ?anc ?ancnome where{
+	?p :name ?pnome. 
+	?p :hasParent+ ?anc.
+    ?anc :name ?ancnome
+}
+
+---------------------------------------
+5.Descendentes
+
+select ?p ?pnome ?desc ?descnome where{
+	?p :name ?pnome. 
+	?p :hasChild+ ?desc.
+    ?desc :name ?descnome
+}
+
+---------------------------------------
+6.Cunhados
+
+select distinct ?a ?anome ?c ?cnome where{
+	?a :name ?anome.
+    ?a :hasChild ?f.
+    ?f :hasParent ?p.
+    ?p :hasSibling ?c.
+    ?c :name ?cnome.
+    filter(?a != ?p).
+	filter(?p != ?c).
+}
+---------------------------------------
+7.Sogro/Sogra
+
+select distinct ?a ?anome ?s ?snome where{
+	?a :name ?anome.
+    ?a :hasChild ?f.
+    ?f :hasParent ?p.
+    ?p :hasParent ?s.
+    ?s :name ?snome.
+    filter(?a != ?p).
+}
+
+-----------------------------------------------------------------
+Construir o triplo Tio
+
+construct {
+    ?a :hasUncle ?t.
+    ?t :name ?tio.
+} where{
+	?a :name ?anome.
+    ?a :hasParent ?p.
+    ?p :hasSibling ?t.
+    ?t :name ?tio.
+    filter(?p != ?t).
+}
+
+-----------------------------------------------------------------
+Construir o triplo Primo
+
+construct {
+    ?a :hasCousin ?primo.
+    ?primo :name ?pnome.
+} where{
+	?a :name ?anome.
+    ?a :hasParent ?p.
+    ?p :hasSibling ?t.
+    ?t :hasChild ?primo.
+    ?primo :name ?pnome.
+    filter(?p != ?t).
+}
